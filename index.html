@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move Two Cure — Referências de Reels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:        #1A3330;
+  --green-mid:    #1E4840;
+  --green-vivid:  #245C50;
+  --gold:         #C5A46B;
+  --gold-light:   #D4B87E;
+  --cream:        #F0EDE4;
+  --cream-light:  #EDEBE5;
+  --white:        #FFFFFF;
+}
+
+body {
+  background: var(--cream-light);
+  color: var(--green);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  padding: 60px 24px 80px;
+}
+
+.container { max-width: 880px; margin: 0 auto; }
+
+/* ─── HEADER ─── */
+.header {
+  background: var(--green);
+  color: var(--cream);
+  padding: 56px 56px 48px;
+  border-radius: 14px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.header__label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+.header__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+.header__title em { color: var(--gold); font-style: italic; }
+.header__sub {
+  font-size: 14px;
+  opacity: 0.65;
+  max-width: 540px;
+  line-height: 1.7;
+}
+.header__divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 24px 0 0;
+}
+
+/* ─── INSTRUÇÕES GERAIS ─── */
+.intro {
+  background: var(--white);
+  padding: 36px 40px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  border-left: 3px solid var(--gold);
+}
+.intro__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+.intro__list {
+  list-style: none;
+  padding: 0;
+}
+.intro__list li {
+  font-size: 14px;
+  color: var(--green);
+  opacity: 0.75;
+  padding: 10px 0 10px 24px;
+  position: relative;
+  line-height: 1.65;
+  border-bottom: 1px solid rgba(26,51,48,0.06);
+}
+.intro__list li:last-child { border-bottom: none; }
+.intro__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 500;
+}
+.intro__list strong {
+  font-weight: 500;
+  color: var(--green);
+  opacity: 1;
+}
+
+/* ─── CARD DE FORMATO ─── */
+.format {
+  background: var(--white);
+  border-radius: 12px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(26,51,48,0.06);
+}
+.format__head {
+  background: var(--green-mid);
+  color: var(--cream);
+  padding: 28px 40px;
+  position: relative;
+}
+.format__num {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.format__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+.format__title em { color: var(--gold); font-style: italic; }
+.format__desc {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 10px;
+  line-height: 1.65;
+  max-width: 600px;
+}
+
+/* ─── COMO GRAVAR ─── */
+.howto {
+  background: rgba(197,164,107,0.08);
+  padding: 24px 40px;
+  border-bottom: 1px solid rgba(26,51,48,0.06);
+}
+.howto__label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--green-vivid);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.howto__text {
+  font-size: 13px;
+  color: var(--green);
+  opacity: 0.8;
+  line-height: 1.7;
+}
+.howto__text strong { font-weight: 500; }
+
+/* ─── REFERÊNCIA INDIVIDUAL ─── */
+.ref {
+  padding: 28px 40px;
+  border-bottom: 1px solid rgba(26,51,48,0.06);
+}
+.ref:last-child { border-bottom: none; }
+.ref__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.ref__label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.ref__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: var(--cream);
+  padding: 9px 18px;
+  border-radius: 100px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.ref__link:hover { opacity: 0.85; }
+.ref__link::after { content: '↗'; font-size: 12px; }
+
+.ref__transcript {
+  background: var(--cream);
+  padding: 24px 28px;
+  border-radius: 8px;
+  border-left: 2px solid var(--gold);
+  margin-top: 14px;
+}
+.ref__transcript-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 12px;
+  display: block;
+}
+.ref__transcript p {
+  font-size: 13.5px;
+  color: var(--green);
+  line-height: 1.75;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+.ref__transcript p:last-child { margin-bottom: 0; }
+.ref__transcript .timestamp {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 14px;
+}
+.ref__transcript .timestamp:first-child { margin-top: 0; }
+
+.ref__note {
+  font-size: 12px;
+  color: var(--green);
+  opacity: 0.55;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(26,51,48,0.1);
+  text-align: center;
+}
+.footer__text {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.footer__sub {
+  font-size: 11px;
+  color: var(--green);
+  opacity: 0.4;
+  margin-top: 8px;
+}
+
+/* ─── PRINT ─── */
+@media print {
+  body { background: white; padding: 20px; }
+  .header, .format, .intro { box-shadow: none; }
+  .ref__link { background: var(--green) !important; color: var(--cream) !important; }
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 700px) {
+  body { padding: 24px 16px 48px; }
+  .header { padding: 40px 28px 32px; }
+  .header__title { font-size: 32px; }
+  .intro, .format__head, .howto, .ref { padding-left: 24px; padding-right: 24px; }
+  .format__title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="header">
+    <p class="header__label">Move Two Cure · Pipeline de Conteúdo</p>
+    <h1 class="header__title">Referências de <em>Reels</em><br>para gravação.</h1>
+    <p class="header__sub">Quatro formatos definidos com referências reais do Instagram, transcrição quando aplicável e instrução de gravação. Cada formato tem uma função diferente no posicionamento da marca — autoridade técnica, cuidado humano, manifesto e reframe.</p>
+    <div class="header__divider"></div>
+  </header>
+
+  <!-- INSTRUÇÕES GERAIS -->
+  <section class="intro">
+    <h2 class="intro__title">Antes de começar — leia</h2>
+    <ul class="intro__list">
+      <li>As referências são <strong>ponto de partida</strong>, não roteiro fechado. Pode adaptar exercícios, trocar ângulos, mudar palavras.</li>
+      <li>Nos formatos com narração em off, a ordem é: <strong>1º grava o exercício</strong> (sem áudio importa), <strong>2º grava a explicação em vídeo</strong> separadamente.</li>
+      <li>No formato "exercício prático com legenda", grave <strong>o vídeo do exercício</strong> + <strong>o áudio em arquivo separado</strong> (basta colocar o celular para gravar e capturar só o áudio).</li>
+      <li>A legenda detalhada (séries, indicação, contraindicação) entra no <strong>texto do post</strong>, não no vídeo.</li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────────────────
+       FORMATO 1
+  ───────────────────────────────────── -->
+  <article class="format">
+    <header class="format__head">
+      <p class="format__num">Formato 01</p>
+      <h2 class="format__title">Exercício prático com <em>legenda explicativa</em></h2>
+      <p class="format__desc">Vídeo curto demonstrando o movimento + legenda detalhando execução, séries, indicação e contraindicação. Conteúdo com altíssima taxa de salvamento.</p>
+    </header>
+
+    <div class="howto">
+      <p class="howto__label">Como gravar</p>
+      <p class="howto__text">Grave <strong>o vídeo do exercício primeiro</strong> (foco no movimento, ângulos limpos). Depois grave <strong>o áudio em arquivo separado</strong> — basta colocar o celular para gravar e capturar apenas a voz explicando. Edita-se depois sobrepondo áudio + vídeo.</p>
+    </div>
+
+    <div class="ref">
+      <div class="ref__top">
+        <p class="ref__label">Referência 01</p>
+        <a class="ref__link" href="https://www.instagram.com/reel/DXaUoGjEYv8" target="_blank" rel="noopener">Abrir no Instagram</a>
+      </div>
+      <p class="ref__note">Referência apenas visual — adaptar exercício e contexto à metodologia M2C.</p>
+    </div>
+
+    <div class="ref">
+      <div class="ref__top">
+        <p class="ref__label">Referência 02</p>
+        <a class="ref__link" href="https://www.instagram.com/reel/DXSeJQgkYdY" target="_blank" rel="noopener">Abrir no Instagram</a>
+      </div>
+      <p class="ref__note">Referência apenas visual — adaptar exercício e contexto à metodologia M2C.</p>
+    </div>
+  </article>
+
+  <!-- ─────────────────────────────────────
+       FORMATO 2
+  ───────────────────────────────────── -->
+  <article class="format">
+    <header class="format__head">
+      <p class="format__num">Formato 02</p>
+      <h2 class="format__title">Treino com <em>narração em off</em></h2>
+      <p class="format__desc">Jeymison treinando ou conduzindo o cliente, com voz narrando o conceito por trás do movimento. Constrói autoridade técnica sem parecer aula.</p>
+    </header>
+
+    <div class="howto">
+      <p class="howto__label">Como gravar</p>
+      <p class="howto__text"><strong>1º — grave o exercício/treino</strong> em vídeo, focando na execução e nos ângulos que ilustram o conceito. <strong>2º — grave a narração em vídeo separadamente</strong> (pode ser direto no celular ou áudio puro). A narração entra como off por cima das imagens do treino.</p>
+    </div>
+
+    <div class="ref">
+      <div class="ref__top">
+        <p class="ref__label">Referência · Adutores e estabilidade pélvica</p>
+        <a class="ref__link" href="https://www.instagram.com/reel/DWUPjLfkdFY" target="_blank" rel="noopener">Abrir no Instagram</a>
+      </div>
+
+      <div class="ref__transcript">
+        <span class="ref__transcript-label">Transcrição da referência</span>
+        <p>When it comes to a stable pelvis, everyone is obsessed with glutes, but the adductors play a huge role. Your adductors attach directly to the pelvis. That means they influence pelvic orientation, pelvic rotation, and femur position on every single rep.</p>
+        <p>If they're weak or undertrained, you lose frontal plane control. The femur may struggle into abduction and adduction depending on if they are positionally short or long, and the pelvis becomes unstable under load. And when the pelvis is unstable, the pelvic floor may responsively clench to make up for that instability, and your glutes lose mechanical advantage. So you compensate and feel less connected in your body.</p>
+        <p>Strong adductors give you better control of the femur in the socket, a more stable pelvis to produce force from, a clean foundation for the glutes to actually extend the hip, and a pelvic floor that can chill out. This is coordination, force transfer, and real strength.</p>
+        <p>If you want better movement, stronger lifts, and more efficient glutes, train the adductors like they're part of the system, and stop just doing Copenhagen planks.</p>
+      </div>
+
+      <p class="ref__note">Pode adaptar o tema (não precisa ser adutores) — o que importa é o formato: treino + narração técnica em off.</p>
+    </div>
+  </article>
+
+  <!-- ─────────────────────────────────────
+       FORMATO 3
+  ───────────────────────────────────── -->
+  <article class="format">
+    <header class="format__head">
+      <p class="format__num">Formato 03</p>
+      <h2 class="format__title">Conteúdo institucional <em>cinematográfico</em></h2>
+      <p class="format__desc">Produção mais cuidada, narrativa, manifesto. Reservado para momentos-chave: lançamentos, marcos, datas comemorativas. Não é frequência, é peso.</p>
+    </header>
+
+    <div class="howto">
+      <p class="howto__label">Como gravar</p>
+      <p class="howto__text"><strong>1º — grave os exercícios/movimentos demonstrativos</strong> que vão ilustrar a narrativa. <strong>2º — grave a explicação em vídeo</strong> (Jeymison à câmera, ou voz off por cima das imagens). A montagem alterna fala + demonstração.</p>
+    </div>
+
+    <div class="ref">
+      <div class="ref__top">
+        <p class="ref__label">Referência · Cervical, postura e expansão torácica</p>
+        <a class="ref__link" href="https://www.instagram.com/reel/DUtSyBOiX91" target="_blank" rel="noopener">Abrir no Instagram</a>
+      </div>
+
+      <div class="ref__transcript">
+        <span class="ref__transcript-label">Transcrição da referência</span>
+        <p>When our rib cage becomes compressed in the front, and our head starts to move forward, our lower cervical spine becomes straighter. Working on drills that expand the chest wall and help guide the scapula back can be really beneficial, but they might not stick if we don't address what this posture does at the upper cervical spine.</p>
+        <p>As our chest compresses and our lower cervical goes into flexion, our upper cervical will go into relative extension. So if I improve somebody's posture by expanding their chest or working on muscles on the back to help hold them more upright, but I don't address the upper cervical extension, when they come up they may be locked in this position of the upper cervical spine and unable to maintain this posture due to the change in their view of the horizon.</p>
+        <p>Here's a drill that works on chest expansion, scapular retraction, lower cervical extension, and upper cervical flexion. Start by sitting up next to the wall with your knees bent. Next, I'm going to take a small therapy ball and place it around the lower cervical spine. This is going to help me maintain that nice lordosis in the lower cervical spine.</p>
+        <p>I'm going to place my hands on the ground and pull my shoulder blades back slightly. And then from there, I'm going to take an inhale through my nose, imagining expanding through my chest. Exhale, let it relax. On my inhale, I want to make a small flexion or tuck down of my chin. Exhale, relax. Inhale, tuck. That upper cervical release is going to allow me to have a new horizon so that I can maintain this upright posture.</p>
+      </div>
+
+      <p class="ref__note">Pode adaptar o tema. O que importa é o tom: explicação técnica + demonstração prática + sensação de cuidado.</p>
+    </div>
+  </article>
+
+  <!-- ─────────────────────────────────────
+       FORMATO 4
+  ───────────────────────────────────── -->
+  <article class="format">
+    <header class="format__head">
+      <p class="format__num">Formato 04</p>
+      <h2 class="format__title">Problema na prática + <em>reframe</em></h2>
+      <p class="format__desc">Mostra o problema (dor crônica, postura, obesidade, depressão, sedentarismo) e apresenta o reframe Move Two Cure. Variar o tema — não é só dor.</p>
+    </header>
+
+    <div class="howto">
+      <p class="howto__label">Como gravar</p>
+      <p class="howto__text"><strong>1º — grave o exercício/drill prático</strong> que resolve o problema. <strong>2º — grave a explicação em vídeo</strong> com a estrutura: problema → causa real → solução prática. A narração pode ser à câmera ou em off.</p>
+    </div>
+
+    <div class="ref">
+      <div class="ref__top">
+        <p class="ref__label">Referência · Psoas, pelve e centro de gravidade</p>
+        <a class="ref__link" href="https://www.instagram.com/reel/DWbrWpXkf1e" target="_blank" rel="noopener">Abrir no Instagram</a>
+      </div>
+
+      <div class="ref__transcript">
+        <span class="ref__transcript-label">Transcrição da referência (com timestamps)</span>
+
+        <span class="timestamp">00:00 — 00:15 · O problema</span>
+        <p>Do you feel like your psoas is always tight? Many people try to fix this with stretching alone, but the problem is often structural. A tight, overactive psoas usually means you're stuck in an anterior pelvic tilt or hyperlordosis. This happens because the body's center of gravity is pushed forward, forcing the psoas to work overtime to keep you upright.</p>
+
+        <span class="timestamp">00:15 — 00:40 · O reframe</span>
+        <p>The real solution isn't just stretching; it's repositioning. We need to shift that center of gravity back and allow the pelvis to rotate into a neutral position. An easy and effective drill uses only a foam roller and a wall. Lie down with your feet hip-width apart on the wall and the roller between your thighs. The key is the contact: feel your heel and the base of your big toe firm against the wall with just a light effort.</p>
+
+        <span class="timestamp">00:40 — 01:10 · A execução</span>
+        <p>By pushing gently into the wall, you'll feel the back side of your pelvis — points called the PSIS — reach the floor. This indicates your pelvis is leveling out and rotating back, which naturally helps the psoas let go. Add a deep inhale through your nose, imagining expansion through your back rib cage, and exhale gently. To progress, you can stand against the wall while maintaining that same alignment: head over rib cage, over pelvis.</p>
+
+        <span class="timestamp">01:10 — 01:30 · O fechamento</span>
+        <p>This awareness is what we call effective stacking. By shifting your weight back toward your heels and keeping this stack, you train your body to maintain an upright, functional posture without overworking the psoas. Try repeating this for about two sets of ten breaths and feel the difference in your movement.</p>
+      </div>
+
+      <p class="ref__note">Estrutura clara: problema → por que a solução comum falha → reframe M2C → drill prático. Pode aplicar a outros temas além de dor.</p>
+    </div>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__text">Move Two Cure · Movement is Information</p>
+    <p class="footer__sub">London · Ontario · Canada</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
